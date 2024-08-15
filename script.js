@@ -43,7 +43,7 @@ const perguntas = [
       "Alternativa 1",
       "Alternativa 2"
  ]
- }
+ },
 ];
    
 let atual = 0;
