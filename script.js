@@ -6,15 +6,21 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
 {
-    enunciado: "Pergunta 1",
+    enunciado: "Para o que serve a Inteligência Artificial?",
     alternativas: [
-       "Alternativa 1",
-       "Alternativa 2"
+      {
+         texto: "Para as máquinas nos dominarem",
+         afirmação: "afirmação"
+      },
+      {
+         texto: "Para as máquinas se desenvolverem e realizarem atividades humanas de forma autônoma",
+         afirmação: "afirmação"
+      }
   ]
 },
 {
 
-   enunciado: "Pergunta 2",
+   enunciado: "No que a Inteligência Artificial nos ajuda?",
    alternativas: [
       "Alternativa 1",
       "Alternativa 2"
