@@ -22,8 +22,15 @@ const perguntas = [
 
    enunciado: "No que a Inteligência Artificial nos ajuda?",
    alternativas: [
-      "Alternativa 1",
-      "Alternativa 2"
+      {
+         texto: "Nos ajuda a realizar tarefas autônomas, como dirigir carros, fazer pesquisas avançadas, diagnosticar doenças, identificar criminosos, entre outras funcionalidades",
+         afirmação: "afirmação"
+      },
+      {
+         texto: "Nos ajuda a colar em provas e atividades"
+         afirmção: "afirmação"
+      }
+     
  ]
 },
 {
