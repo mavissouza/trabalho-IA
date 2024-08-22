@@ -58,6 +58,8 @@ function mostraPergunta(){
 function mostraPergunta(){
   for(const alternativa of perguntaAtual.alternativas){
    const botaoAlternativa = document.createElement("button");
+   botaoAlternativa.textContent = alternativa;
+   caixaAlternativas.appendChild(botaoAlternativas);
   }
 
 }
