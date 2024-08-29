@@ -27,34 +27,53 @@ const perguntas = [
          afirmação: "afirmação"
       },
       {
-         texto: "Nos ajuda a colar em provas e atividades"
-         afirmção: "afirmação"
+         texto: "Nos ajuda a colar em provas e atividades",
+         afirmação: "afirmação"
       }
      
  ]
 },
 {
 
-   enunciado: "Pergunta 3",
+   enunciado: "Quando a IA surgiu?",
    alternativas: [
-      "Alternativa 1",
-      "Alternativa 2"
+      {
+         texto: "Tudo começou em 1956",
+         afirmação: "afirmação"
+      },
+      {
+         texto: "Começou a partir dos anos 2000",
+         afirmação: "afirmação"
+      }
+      
  ]
 },
 {
 
-   enunciado: "Pergunta 4",
+   enunciado: "Como a IA aprende?",
    alternativas: [
-      "Alternativa 1",
-      "Alternativa 2"
+      {
+         texto: "Aprende de forma totalmente autônoma, memoriza falas dos humanos e não precisa de algoritmos para processar os dados",
+         afirmação: "afirmação"
+      },
+      {
+         texto: "A IA aprende através de algoritmos e modelos que processam grandes volumes de dados.",
+         afirmação: "afirmação"
+      }
  ]
 },
 {
 
-   enunciado: "Pergunta 5",
+   enunciado: "Quais são as aplicações práticas da IA?",
    alternativas: [
-      "Alternativa 1",
-      "Alternativa 2"
+      {
+         texto: "É utilizada somente em celulares e computadores",
+         afirmação: "afirmação"
+      },
+      {
+         texto: "A Inteligência Artificial tem inúmeras aplicações em setores como saúde, finanças, educação, transporte e muito mais.",
+         afirmação: "afirmação"
+      }
  ]
  },
 ];
