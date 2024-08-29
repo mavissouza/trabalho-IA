@@ -93,7 +93,7 @@ function mostraPergunta() {
    mostraAlternativa();
 }
 
-function mostraAlternativa(){
+function mostraAlternativas(){
   for(const alternativa of perguntaAtual.alternativas){
    const botaoAlternativa = document.createElement("button");
    botaoAlternativa.textContent = alternativa;
@@ -101,4 +101,17 @@ function mostraAlternativa(){
    caixaAlternativas.appendChild(botaoAlternativas);
   }
 
+}
+
+function respostaSelecionada(opçãoSelecionada) {
+   const afirmações
+   historiaFinal += afirmações + " ";
+   atual++
+   mostraPergunta();
+}
+
+function mostraResultado(){
+   caixaPerguntas.textContent = "Obrigada por participar! (;";
+   textoResultado.textContent =historiaFinal;
+   caixaAlternativas.textContent = "";
 }
