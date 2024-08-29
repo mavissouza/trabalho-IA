@@ -103,15 +103,15 @@ function mostraAlternativas(){
 
 }
 
-function respostaSelecionada(opçãoSelecionada) {
-   const afirmações
-   historiaFinal += afirmações + " ";
+function respostaSelecionada(opcaoSelecionada) {
+   const afirmacoes
+   historiaFinal += afirmacoes + " ";
    atual++
    mostraPergunta();
 }
 
 function mostraResultado(){
-   caixaPerguntas.textContent = "Obrigada por participar! (;";
+   caixaPerguntas.textContent = "Obrigada por participar!";
    textoResultado.textContent =historiaFinal;
    caixaAlternativas.textContent = "";
 }
