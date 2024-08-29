@@ -10,11 +10,11 @@ const perguntas = [
     alternativas: [
       {
          texto: "Para as máquinas nos dominarem",
-         afirmação: "afirmação"
+         afirmacao: "Isso é assustador!"
       },
       {
          texto: "Para as máquinas se desenvolverem e realizarem atividades humanas de forma autônoma",
-         afirmação: "afirmação"
+         afirmação: "Isso é ótimo!"
       }
   ]
 },
@@ -24,11 +24,11 @@ const perguntas = [
    alternativas: [
       {
          texto: "Nos ajuda a realizar tarefas autônomas, como dirigir carros, fazer pesquisas avançadas, diagnosticar doenças, identificar criminosos, entre outras funcionalidades",
-         afirmação: "afirmação"
+         afirmacao: "Isso é ótimo!"
       },
       {
          texto: "Nos ajuda a colar em provas e atividades",
-         afirmação: "afirmação"
+         afirmacao: "Isso é péssimo!"
       }
      
  ]
@@ -39,11 +39,11 @@ const perguntas = [
    alternativas: [
       {
          texto: "Tudo começou em 1956",
-         afirmação: "afirmação"
+         afirmacao: "Uau!"
       },
       {
          texto: "Começou a partir dos anos 2000",
-         afirmação: "afirmação"
+         afirmacao: "Impressionante"
       }
       
  ]
@@ -54,11 +54,11 @@ const perguntas = [
    alternativas: [
       {
          texto: "Aprende de forma totalmente autônoma, memoriza falas dos humanos e não precisa de algoritmos para processar os dados",
-         afirmação: "afirmação"
+         afirmacao: "Isso é surpreendente!"
       },
       {
          texto: "A IA aprende através de algoritmos e modelos que processam grandes volumes de dados.",
-         afirmação: "afirmação"
+         afirmação: "Isso é incrível!"
       }
  ]
 },
@@ -68,11 +68,11 @@ const perguntas = [
    alternativas: [
       {
          texto: "É utilizada somente em celulares e computadores",
-         afirmação: "afirmação"
+         afirmacao: "Isso é ruim!"
       },
       {
          texto: "A Inteligência Artificial tem inúmeras aplicações em setores como saúde, finanças, educação, transporte e muito mais.",
-         afirmação: "afirmação"
+         afirmação: "Isso é incrível!"
       }
  ]
  },
@@ -80,23 +80,23 @@ const perguntas = [
    
 let atual = 0;
 let perguntaAtual;
-let historiaFinal = " ";
+let historiaFinal = "";
 
 function mostraPergunta() {
-   if (atual >= perguntas.length){
-
+   if (atual >= perguntas.length) {
+      mostraResultado();
       return;
    }
    perguntaAtual = perguntas[atual];
    caixaPerguntas.textContent = perguntaAtual.enunciado;
-   caixaAlternativas.textContent = " ";
-   mostraAlternativa();
+   caixaAlternativas.textContent = "";
+   mostraAlternativas();
 }
 
 function mostraAlternativas(){
-  for(const alternativa of perguntaAtual.alternativas){
-   const botaoAlternativa = document.createElement("button");
-   botaoAlternativa.textContent = alternativa;
+  for(const alternativa of perguntaAtual.alternativas) {
+   const botaoAlternativas = document.createElement("button");
+   botaoAlternativa.textContent = alternativa.texto;
    botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa));
    caixaAlternativas.appendChild(botaoAlternativas);
   }
@@ -104,14 +104,16 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-   const afirmacoes
+   const afirmacoes = opcaoSelecionada.afirmacao;
    historiaFinal += afirmacoes + " ";
-   atual++
+   atual++;
    mostraPergunta();
 }
 
-function mostraResultado(){
+function mostraResultado() {
    caixaPerguntas.textContent = "Obrigada por participar!";
-   textoResultado.textContent =historiaFinal;
+   textoResultado.textContent = historiaFinal;
    caixaAlternativas.textContent = "";
 }
+
+mostraPergunta();
