@@ -80,17 +80,24 @@ const perguntas = [
    
 let atual = 0;
 let perguntaAtual;
+let historiaFinal = " ";
 
-function mostraPergunta(){
+function mostraPergunta() {
+   if (atual >= perguntas.length){
+
+      return;
+   }
    perguntaAtual = perguntas[atual];
    caixaPerguntas.textContent = perguntaAtual.enunciado;
+   caixaAlternativas.textContent = " ";
    mostraAlternativa();
 }
 
-function mostraPergunta(){
+function mostraAlternativa(){
   for(const alternativa of perguntaAtual.alternativas){
    const botaoAlternativa = document.createElement("button");
    botaoAlternativa.textContent = alternativa;
+   botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa));
    caixaAlternativas.appendChild(botaoAlternativas);
   }
 
